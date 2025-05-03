@@ -1,0 +1,31 @@
+C++:
+#include <iostream>
+
+int main() {
+    int* stack = new int[10];  // Dynamically allocated heap memory
+    int top = -1;
+
+    // Push operation
+    stack[++top] = 10;
+    stack[++top] = 20;
+
+    // Pop operation
+    int popped = stack[top--];
+
+    std::cout << "Popped: " << popped << std::endl;
+
+    delete[] stack;  // Deallocate memory
+    return 0;
+}
+
+Python:
+stack = []  # Dynamically allocated heap memory
+
+# Push operation
+stack.append(10)
+stack.append(20)
+
+# Pop operation
+popped = stack.pop()
+
+print("Popped:", popped)
