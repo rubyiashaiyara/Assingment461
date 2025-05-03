@@ -1,0 +1,35 @@
+C++:
+#include <iostream>
+
+int main() {
+    int* stack = new int[5];  // Fixed-size heap allocation
+    int top = -1;
+
+    // Push operation
+    stack[++top] = 10;
+    stack[++top] = 20;
+
+    // Pop operation
+    int popped = stack[top--];
+
+    std::cout << "Popped: " << popped << std::endl;
+
+    delete[] stack;  // Deallocate memory
+    return 0;
+}
+
+Python:
+stack = [None] * 5  # Fixed-size heap allocation
+top = -1
+
+# Push operation
+top += 1
+stack[top] = 10
+top += 1
+stack[top] = 20
+
+# Pop operation
+popped = stack[top]
+top -= 1
+
+print("Popped:", popped)
