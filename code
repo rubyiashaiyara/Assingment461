@@ -1,0 +1,33 @@
+a) Fixed Stack Dynamic
+C++:
+#include <iostream>
+
+int main() {
+    int arr[5];  // Fixed-size stack
+    int top = -1;
+
+    // Push operation
+    arr[++top] = 10;
+    arr[++top] = 20;
+
+    // Pop operation
+    int popped = arr[top--];
+
+    std::cout << "Popped: " << popped << std::endl;
+    return 0;
+}
+Python:
+stack = [None] * 5  # Fixed-size stack
+top = -1
+
+# Push operation
+top += 1
+stack[top] = 10
+top += 1
+stack[top] = 20
+
+# Pop operation
+popped = stack[top]
+top -= 1
+
+print("Popped:", popped)
